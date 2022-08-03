@@ -49,7 +49,7 @@ class Block extends Controller {
       'titles' => Element::title($data),
       'button' => Element::button($data['button']),
       'content' => $data['c-content'],
-      'image' => Element::image($data['image'], '1920px'),
+      'image' => Element::image($data['c-image'], '1920px'),
     ];
   }
 

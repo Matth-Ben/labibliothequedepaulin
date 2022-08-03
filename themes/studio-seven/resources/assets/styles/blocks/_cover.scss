@@ -1,0 +1,68 @@
+@use "../config" as *;
+
+.b-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 50px 0;
+  background: $primary;
+
+  @include media-breakpoint-up(lg) {
+    height: 70vh;
+    margin: auto auto 150px;
+    padding: 0;
+  }
+
+  &__title {
+    position: relative;
+    padding: 50px 45px;
+    border: 1px solid $secondary;
+
+    &-suptitle {
+      position: absolute;
+      top: -32px;
+      left: 20px;
+      padding: 0 15px;
+      background: $primary;
+      font-family: $font-heading;
+      font-style: italic;
+
+      @include f50;
+    }
+
+    .e-title {
+      font-family: $font-default;
+      font-style: normal;
+
+      @include f36;
+    }
+
+    .e-subtitle {
+      margin: auto;
+      font-weight: 600;
+      text-transform: capitalize;
+
+      @include f24;
+    }
+  }
+
+  &__content {
+    margin: 25px auto 20px;
+  }
+
+  &__image {
+    position: relative;
+    margin-top: 50px;
+
+    @include media-breakpoint-up(lg) { margin-top: auto; }
+
+    .image {
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 0;
+        height: 500px;
+      }
+    }
+  }
+}
