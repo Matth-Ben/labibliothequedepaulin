@@ -1,0 +1,18 @@
+@use "../config" as *;
+
+.b-last-post {
+  &__title {
+    text-align: center;
+    margin-bottom: 35px;
+
+    @include media-breakpoint-up(md) { margin-bottom: 70px; }
+  }
+
+  &__button {
+    margin-top: 35px;
+
+    .button {
+      justify-content: center;
+    }
+  }
+}

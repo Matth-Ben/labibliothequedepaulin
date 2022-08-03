@@ -34,4 +34,13 @@ class Component extends Controller {
       ]
     ];
   }
+
+  public static function cardPost($id) {
+    return [
+      'title' => get_the_title($id),
+      'excerpt' => excerpt(35, $id),
+      'url' => get_the_permalink($id),
+      'image' => Element::image(get_post_thumbnail_id($id), 300),
+    ];
+  }
 }

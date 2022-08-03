@@ -174,6 +174,23 @@ function input_to_button( $button, $form ) {
   add_filter( 'gform_previous_button', 'input_to_button', 10, 2 );
   add_filter( 'gform_submit_button', 'input_to_button', 10, 2 );
 
+/**
+* Excerpt function
+*/
+function excerpt($limit, $id) {
+    $excerpt = explode(' ', get_the_excerpt($id), $limit);
+
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+
+    return $excerpt;
+}
 
 function dc_enable_gutenberg_post_ids($can_edit, $post) {
     if (get_option('page_for_posts') === $post->ID) return true;
