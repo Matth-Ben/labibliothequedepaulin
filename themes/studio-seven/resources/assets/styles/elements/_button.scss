@@ -1,0 +1,13 @@
+@use "../config" as *;
+
+.button {
+  display: flex;
+
+  a {
+    display: inline;
+    padding: 15px 35px;
+    background: $secondary;
+    color: $black;
+    font-family: $font-heading;
+  }
+}
