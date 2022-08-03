@@ -63,23 +63,22 @@ class Block extends Controller {
   }
 
   public static function list($data) {
-    for ($i = 0; $i < $data['l-repeater'] ; $i++) {
+    for ($i = 0; $i < $data['li-repeater'] ; $i++) {
       $elements = [];
 
-      for ($j = 0; $j < $data['l-repeater_' . $i . '_elements'] ; $j++) {
-        $elements[] = $data['l-repeater_' . $i . '_elements_' . $j . '_title'];
+      for ($j = 0; $j < $data['li-repeater_' . $i . '_elements'] ; $j++) {
+        $elements[] = $data['li-repeater_' . $i . '_elements_' . $j . '_title'];
       }
 
       $list[] = [
-        'subtitle' => $data['l-repeater_' . $i . '_suptitle'],
-        'title' => $data['l-repeater_' . $i . '_title'],
-        'button' => Element::button($data['l-repeater_' . $i . '_button']),
+        'subtitle' => $data['li-repeater_' . $i . '_suptitle'],
+        'title' => $data['li-repeater_' . $i . '_title'],
+        'button' => Element::button($data['li-repeater_' . $i . '_button']),
         'elements' => $elements
       ];
     }
 
     return [
-      'titles' => Element::title($data),
       'list' => $list
     ];
   }

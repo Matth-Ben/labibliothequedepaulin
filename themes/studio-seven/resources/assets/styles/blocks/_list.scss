@@ -1,0 +1,41 @@
+@use "../config" as *;
+
+.b-list {
+  &__item {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-up(lg) { margin-bottom: 0; }
+
+    &-title {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    &-body {
+      border: 1px solid $black;
+      padding: 35px;
+
+      @include media-breakpoint-up(md) { padding: 35px 60px; }
+
+      &__list {
+        margin: 25px auto;
+        padding: 0;
+        list-style: none;
+
+        &-element {
+          margin-bottom: 20px;
+
+          @include f16;
+        }
+      }
+    }
+
+    &-button {
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
