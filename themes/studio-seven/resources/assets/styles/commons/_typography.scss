@@ -1,6 +1,25 @@
-// body {}
-// h1 {}
-// h2 {}
-// h3 {}
+@use "../config" as *;
+
+body {
+  @include f14;
+}
+
+h1 {
+  font-family: $font-heading;
+
+  @include f64;
+}
+
+h2 {
+  font-family: $font-heading;
+  font-style: italic;
+
+  @include f50;
+}
+
+h3 {
+  @include f24;
+}
+
 // h4 {}
 // h5 {}
