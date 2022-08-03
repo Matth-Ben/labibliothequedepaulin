@@ -5,9 +5,12 @@ $warning: #e6662a;
 $success: #0eb31f;
 $danger: #e6214b;
 
+$primary: #ffe7d7;
+$secondary: #daa277;
+
 /* FONTS */
 $font-default: "Arial", sans-serif;
-$font-heading: "Arial", sans-serif;
+$font-heading: "Cormorant Garamond", sans-serif;
 
 /* EASINGS */
 $ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -21,3 +24,5 @@ $z-header: 15;
 /* BROWSERS TEST */
 $is-safari: "(background: -webkit-named-image(i))";
 $is-firefox: "(-moz-appearance:none)";
+
+$column-width: 4.16666vw;
