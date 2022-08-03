@@ -1,0 +1,8 @@
+@use "../config" as *;
+
+.e-subtitle {
+  margin: 35px auto;
+  text-transform: uppercase;
+
+  @include f18;
+}

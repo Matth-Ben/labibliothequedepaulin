@@ -12,8 +12,6 @@
   @endif
 
   @if(!empty($data['button']))
-    <div class="c-classic-content__button">
-      <a href="{{ $data['button']['url'] }}" class="e-button btn" @if($data['button']['target']){{ 'target="_blank" rel="noopener"' }}@endif>{!! $data['button']['title'] !!}</a>
-    </div>
+    @include('elements/button', ['data' => $data])
   @endif
 </div>
