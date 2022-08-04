@@ -1,22 +1,60 @@
-.footer {
-  &__links {
-    &-credit {
-      position: relative;
-      display: inline-block;
-      padding-right: 30px;
+@use "../config" as *;
 
-      .link {
-        display: inline-block;
-        padding: 0 20px;
+.footer {
+  padding: 55px 0;
+  background: $secondary;
+
+  figure { margin: auto; }
+
+  &__logo,
+  &__logo-2 { text-align: center; }
+
+  &__separator {
+    width: 70%;
+    height: 7px;
+    margin: 20px auto 35px;
+    border: 1px solid $white;
+
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      margin: 20px auto;
+    }
+  }
+
+  &__copyright {
+    display: none;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) { display: block; }
+
+    a {
+      color: $black;
+      font-weight: bold;
+    }
+
+    &.mobile {
+      display: block;
+      margin-top: 25px;
+
+      @include media-breakpoint-up(lg) { display: none; }
+    }
+  }
+
+  &__menu {
+    text-align: center;
+
+    @include media-breakpoint-up(lg) { text-align: left; }
+
+    &-item {
+      margin-bottom: 25px;
+
+      @include media-breakpoint-up(lg) {
+        &:last-child { margin-bottom: 0; }
       }
 
-      img {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 50%;
-        transform: translateY(50%);
+      &__link {
+        font-family: $font-heading;
+        font-weight: bold;
       }
     }
   }
