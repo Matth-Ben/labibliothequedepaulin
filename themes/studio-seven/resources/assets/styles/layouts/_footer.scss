@@ -55,6 +55,8 @@
       &__link {
         font-family: $font-heading;
         font-weight: bold;
+
+        @include f18;
       }
     }
   }
