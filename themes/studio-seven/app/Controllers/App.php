@@ -22,7 +22,7 @@ class App extends Controller {
 
   public static function menu() {
     $return = [];
-    $menus = ['primary_navigation', 'footer_navigation'];
+    $menus = ['primary_navigation', 'footer_navigation_1', 'footer_navigation_2'];
     $menuLocations = get_nav_menu_locations();
 
     if ($menuLocations) {

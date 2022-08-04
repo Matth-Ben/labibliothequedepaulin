@@ -137,7 +137,8 @@ function toCamelCase($string) {
 * Add menu location
 */
 function wpb_custom_new_menu() {
-    register_nav_menu('footer_navigation',__( 'Footer' ));
+    register_nav_menu('footer_navigation_1',__( 'Footer' ));
+    register_nav_menu('footer_navigation_2',__( 'Footer 2' ));
 }
 add_action( 'init', 'wpb_custom_new_menu' );
 

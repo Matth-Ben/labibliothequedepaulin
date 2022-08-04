@@ -14,7 +14,7 @@
       </div>
       <div class="col-lg-3 offset-lg-1">
         <div class="footer__menu">
-          @foreach ($GLOBALS['navigation']['primary_navigation'] as $item)
+          @foreach ($GLOBALS['navigation']['footer_navigation_1'] as $item)
             <div class="footer__menu-item">
               <a href="{{ $item['url'] }}" class="footer__menu-item__link">{{ $item['title'] }}</a>
             </div>
@@ -23,7 +23,7 @@
       </div>
       <div class="col-lg-3 offset-lg-1">
         <div class="footer__menu">
-          @foreach ($GLOBALS['navigation']['primary_navigation'] as $item)
+          @foreach ($GLOBALS['navigation']['footer_navigation_2'] as $item)
             <div class="footer__menu-item">
               <a href="{{ $item['url'] }}" class="footer__menu-item__link">{{ $item['title'] }}</a>
             </div>
