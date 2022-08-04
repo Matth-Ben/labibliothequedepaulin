@@ -1,0 +1,60 @@
+@use "../config" as *;
+
+.c-pagination {
+  margin: 50px auto;
+  font-family: $font-heading;
+
+  @include f36;
+
+  @include media-breakpoint-up(lg) {
+    margin: 50px auto 150px;
+  }
+
+  .current { font-weight: bold; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 65px;
+
+    .page-numbers { margin: auto 5px; }
+  }
+
+  .next,
+  .prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    background: $secondary;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 33px;
+      height: 33px;
+      margin: auto;
+      background-image: url("../images/svg/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .next {
+    right: 0;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .prev { left: 0; }
+}
